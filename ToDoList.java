@@ -2,6 +2,7 @@ package TodoList;
 
 import TodoList.Listeners.SaveTasksOnCloseListener;
 import TodoList.Listeners.ButtonActionListeners.AddTaskActionListener;
+import TodoList.Listeners.ButtonActionListeners.CompleteTaskActionListener;
 import TodoList.Listeners.ButtonActionListeners.DeleteTaskActionListener;
 import TodoList.Listeners.ButtonActionListeners.ModifyTaskActionListener;
 import TodoList.Style.*;
@@ -72,5 +73,9 @@ public class ToDoList {
         //Modify Task action listener
         ModifyTaskActionListener modifyTaskActionListener = new ModifyTaskActionListener(listModel, taskList, taskInput);
         modifyButton.addActionListener(modifyTaskActionListener);
+
+        //Complete Task action listener
+        CompleteTaskActionListener completeTaskActionListener = new CompleteTaskActionListener(listModel, taskList);
+        completeButton.addActionListener(completeTaskActionListener);
     }
 }
