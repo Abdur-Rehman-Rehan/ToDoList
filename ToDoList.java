@@ -2,6 +2,9 @@ package TodoList;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class ToDoList {
     public static void main(String[] args) {
@@ -24,9 +27,20 @@ public class ToDoList {
         JButton addButton = new JButton("Add Task");
         JButton deleteButton = new JButton("Delete");
         JButton completeButton = new JButton("Completed");
-        JButton uncompleteButton = new JButton("Uncompleted");
+        JButton uncompleteButton = new JButton("Incomplete");
         JButton modifyButton = new JButton("Modify Task");
 
         
+        File file = new File("TodoList\\tasks.txt");// Change this to the path of your tasks.txt file
+        try (Scanner scanner = new Scanner(file)) {
+            while (scanner.hasNextLine()) {
+                String taskLine = scanner.nextLine();
+                boolean isCompleted = taskLine.startsWith("[x] ");
+                String taskName = taskLine.substring(4);
+                listModel.addElement(new Task(taskName, isCompleted));
+            }
+        } catch (FileNotFoundException e) {
+            // File not found, ignore
+        }
     }
 }
