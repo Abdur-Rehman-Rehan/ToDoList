@@ -45,5 +45,9 @@ public class ToDoList {
         } catch (FileNotFoundException e) {
             // File not found, ignore
         }
+
+
+        // Style the GUI
+        StyleManager.beautify(frame, taskList, taskInput, addButton, deleteButton, completeButton, uncompleteButton,modifyButton,panel,scrollPane);
     }
 }
