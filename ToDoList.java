@@ -1,6 +1,7 @@
 package TodoList;
 
 import TodoList.Listeners.SaveTasksOnCloseListener;
+import TodoList.Listeners.ButtonActionListeners.AddTaskActionListener;
 import TodoList.Style.*;
 
 import javax.swing.*;
@@ -52,9 +53,15 @@ public class ToDoList {
         StyleManager.beautify(frame, taskList, taskInput, addButton, deleteButton, completeButton, uncompleteButton,modifyButton,panel,scrollPane);
 
 
-        // Add Close action listener
+        // ActionListeners for buttons
+
+        //Close action listener
         SaveTasksOnCloseListener saveTasksOnCloseListener = new SaveTasksOnCloseListener(listModel, file);
         frame.addWindowListener(saveTasksOnCloseListener);
+
+        //Add Task action listener
+        AddTaskActionListener addTaskActionListener = new AddTaskActionListener(listModel, taskInput);
+        addButton.addActionListener(addTaskActionListener);
 
     }
 }
