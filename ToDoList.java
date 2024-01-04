@@ -1,5 +1,6 @@
 package TodoList;
 
+import TodoList.Listeners.SaveTasksOnCloseListener;
 import TodoList.Style.*;
 
 import javax.swing.*;
@@ -20,7 +21,7 @@ public class ToDoList {
         frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         frame.setSize(600, 400);
 
-
+        // Created components
         JPanel panel = new JPanel(new BorderLayout());
         DefaultListModel<Task> listModel = new DefaultListModel<>();
         JList<Task> taskList = new JList<>(listModel);
@@ -49,5 +50,11 @@ public class ToDoList {
 
         // Style the GUI
         StyleManager.beautify(frame, taskList, taskInput, addButton, deleteButton, completeButton, uncompleteButton,modifyButton,panel,scrollPane);
+
+
+        // Add Close action listener
+        SaveTasksOnCloseListener saveTasksOnCloseListener = new SaveTasksOnCloseListener(listModel, file);
+        frame.addWindowListener(saveTasksOnCloseListener);
+
     }
 }
