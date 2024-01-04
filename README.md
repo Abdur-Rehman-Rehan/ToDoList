@@ -6,8 +6,8 @@ Some of the functions of the ToDo List are
 
 - Add Task
 - Delete Task
-- Mark as Compelted
-- Mark as uncompelted
+- Mark as Completed
+- Mark as incomplete
 - Update/Modify Task
 - Retain the tasks after closing the application
 
@@ -16,12 +16,12 @@ Features of application are
 - GUI
 - Dark theme application for comfort of eyes.
 - Modern Look
-- Easy to use interace
-- Modify color scheme to differenitae between completed and incomplete task
+- Easy to use interface
+- Modify color scheme to differentiate between completed and incomplete task
 
 $${\color{red}Important}$$
 
-When compiling or modifing the code keep in mind to keep the files in folder named TodoList or if you want to place it custom named folder then update the package to the name of your folder.
+When compiling or modifying the code keep in mind to keep the files in folder named TodoList or if you want to place it custom named folder then update the package to the name of your folder.
 
 $${\color{green}How to Use}$$
 
