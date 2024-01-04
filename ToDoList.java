@@ -1,12 +1,7 @@
 package TodoList;
 
-import TodoList.Listeners.SaveTasksOnCloseListener;
-import TodoList.Listeners.TaskInputFocusListener;
-import TodoList.Listeners.ButtonActionListeners.AddTaskActionListener;
-import TodoList.Listeners.ButtonActionListeners.CompleteTaskActionListener;
-import TodoList.Listeners.ButtonActionListeners.DeleteTaskActionListener;
-import TodoList.Listeners.ButtonActionListeners.ModifyTaskActionListener;
-import TodoList.Listeners.ButtonActionListeners.IncompleteTaskActionListener;
+import TodoList.Listeners.*;
+import TodoList.Listeners.ButtonActionListeners.*;
 import TodoList.Style.*;
 
 import javax.swing.*;
@@ -25,7 +20,8 @@ public class ToDoList {
     private static void createAndShowGUI() {
         JFrame frame = new JFrame("To-Do List");
         frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-        frame.setSize(600, 400);
+        frame.setSize(560, 650);
+
 
         // Created components
         JPanel panel = new JPanel(new BorderLayout());
@@ -41,6 +37,7 @@ public class ToDoList {
         JButton modifyButton = new JButton("Modify Task");
 
         
+
         File file = new File("TodoList\\tasks.txt");// Change this to the path of your tasks.txt file
         try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNextLine()) {
@@ -54,8 +51,10 @@ public class ToDoList {
         }
 
 
+
         // Style the GUI
         StyleManager.beautify(frame, taskList, taskInput, addButton, deleteButton, completeButton, uncompleteButton,modifyButton,panel,scrollPane);
+
 
 
         // ActionListeners for buttons
