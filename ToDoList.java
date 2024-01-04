@@ -5,6 +5,7 @@ import TodoList.Listeners.ButtonActionListeners.AddTaskActionListener;
 import TodoList.Listeners.ButtonActionListeners.CompleteTaskActionListener;
 import TodoList.Listeners.ButtonActionListeners.DeleteTaskActionListener;
 import TodoList.Listeners.ButtonActionListeners.ModifyTaskActionListener;
+import TodoList.Listeners.ButtonActionListeners.IncompleteTaskActionListener;
 import TodoList.Style.*;
 
 import javax.swing.*;
@@ -77,5 +78,9 @@ public class ToDoList {
         //Complete Task action listener
         CompleteTaskActionListener completeTaskActionListener = new CompleteTaskActionListener(listModel, taskList);
         completeButton.addActionListener(completeTaskActionListener);
+
+        //Incomplete Task action listener
+        IncompleteTaskActionListener uncompleteTaskActionListener = new IncompleteTaskActionListener(listModel, taskList);
+        uncompleteButton.addActionListener(uncompleteTaskActionListener);
     }
 }
