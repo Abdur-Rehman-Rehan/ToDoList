@@ -1,4 +1,4 @@
-package ToDoList;
+package TodoList;
 
 import javax.swing.*;
 
