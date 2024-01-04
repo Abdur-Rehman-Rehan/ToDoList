@@ -1,5 +1,7 @@
 package TodoList;
 
+import TodoList.Style.*;
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
@@ -22,6 +24,7 @@ public class ToDoList {
         JPanel panel = new JPanel(new BorderLayout());
         DefaultListModel<Task> listModel = new DefaultListModel<>();
         JList<Task> taskList = new JList<>(listModel);
+        taskList.setCellRenderer(new TaskCellRenderer());
         JScrollPane scrollPane = new JScrollPane(taskList);
         JTextField taskInput = new JTextField(20);
         JButton addButton = new JButton("Add Task");
