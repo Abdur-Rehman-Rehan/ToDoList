@@ -1,6 +1,7 @@
 package TodoList;
 
 import TodoList.Listeners.SaveTasksOnCloseListener;
+import TodoList.Listeners.TaskInputFocusListener;
 import TodoList.Listeners.ButtonActionListeners.AddTaskActionListener;
 import TodoList.Listeners.ButtonActionListeners.CompleteTaskActionListener;
 import TodoList.Listeners.ButtonActionListeners.DeleteTaskActionListener;
@@ -82,5 +83,9 @@ public class ToDoList {
         //Incomplete Task action listener
         IncompleteTaskActionListener uncompleteTaskActionListener = new IncompleteTaskActionListener(listModel, taskList);
         uncompleteButton.addActionListener(uncompleteTaskActionListener);
+
+        // FocusListener for taskInput
+        TaskInputFocusListener taskInputFocusListener = new TaskInputFocusListener(taskInput);
+        taskInput.addFocusListener(taskInputFocusListener);
     }
 }
