@@ -19,11 +19,11 @@ Features of application are
 - Easy to use interace
 - Modify color scheme to differenitae between completed and incomplete task
 
-$${\color{red}## Important}$$
+$${\color{red}Important}$$
 
 When compiling or modifing the code keep in mind to keep the files in folder named TodoList or if you want to place it custom named folder then update the package to the name of your folder.
 
-$${\color{green}## How to Use}$$
+$${\color{green}How to Use}$$
 
 Run the application. Add the text/task in the text box and press Add task Button.
 
