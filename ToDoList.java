@@ -2,7 +2,8 @@ package TodoList;
 
 import TodoList.Listeners.SaveTasksOnCloseListener;
 import TodoList.Listeners.ButtonActionListeners.AddTaskActionListener;
-import TodoList.Listeners.ButtonActionListeners.DeleteTaskActionListener;   
+import TodoList.Listeners.ButtonActionListeners.DeleteTaskActionListener;
+import TodoList.Listeners.ButtonActionListeners.ModifyTaskActionListener;
 import TodoList.Style.*;
 
 import javax.swing.*;
@@ -68,6 +69,8 @@ public class ToDoList {
         DeleteTaskActionListener deleteTaskActionListener = new DeleteTaskActionListener(listModel, taskList);
         deleteButton.addActionListener(deleteTaskActionListener);
 
-        
+        //Modify Task action listener
+        ModifyTaskActionListener modifyTaskActionListener = new ModifyTaskActionListener(listModel, taskList, taskInput);
+        modifyButton.addActionListener(modifyTaskActionListener);
     }
 }
