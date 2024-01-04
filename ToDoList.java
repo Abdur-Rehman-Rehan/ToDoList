@@ -2,6 +2,7 @@ package TodoList;
 
 import TodoList.Listeners.SaveTasksOnCloseListener;
 import TodoList.Listeners.ButtonActionListeners.AddTaskActionListener;
+import TodoList.Listeners.ButtonActionListeners.DeleteTaskActionListener;   
 import TodoList.Style.*;
 
 import javax.swing.*;
@@ -63,5 +64,10 @@ public class ToDoList {
         AddTaskActionListener addTaskActionListener = new AddTaskActionListener(listModel, taskInput);
         addButton.addActionListener(addTaskActionListener);
 
+        //Delete Task action listener
+        DeleteTaskActionListener deleteTaskActionListener = new DeleteTaskActionListener(listModel, taskList);
+        deleteButton.addActionListener(deleteTaskActionListener);
+
+        
     }
 }
