@@ -20,8 +20,7 @@ public class StyleManager {
         modifyButton.setFont(bigBoldFont);
 
         // Set dark theme colors
-        setDarkTheme(frame, taskList, taskInput, addButton, deleteButton, completeButton,
-                uncompleteButton, modifyButton, panel, scrollPane);
+        setDarkTheme(frame, taskList, taskInput, addButton, deleteButton, completeButton, uncompleteButton, modifyButton, panel, scrollPane);
 
         // Set text color
         Color textColor = new Color(255, 255, 255);
@@ -33,15 +32,14 @@ public class StyleManager {
         modifyButton.setForeground(textColor);
 
         // Set button backgrounds
-        addButton.setBackground(new Color(30, 21, 55)); // #ced802
-        deleteButton.setBackground(new Color(117, 11, 25)); // #871005
-        completeButton.setBackground(new Color(35, 163, 15)); // #098705
-        uncompleteButton.setBackground(new Color(0, 53, 84)); // #056687
-        modifyButton.setBackground(new Color(58, 19, 58)); // #000000
+        addButton.setBackground(new Color(30, 21, 55)); 
+        deleteButton.setBackground(new Color(117, 11, 25)); 
+        completeButton.setBackground(new Color(35, 163, 15));
+        uncompleteButton.setBackground(new Color(0, 53, 84));
+        modifyButton.setBackground(new Color(58, 19, 58)); 
 
         // Configure input and button panels
-        configurePanels(taskInput, addButton, deleteButton, completeButton,
-                uncompleteButton, modifyButton, panel, scrollPane);
+        configurePanels(taskInput, addButton, deleteButton, completeButton, uncompleteButton, modifyButton, panel, scrollPane);
 
         // Add panel to frame
         frame.add(panel);
