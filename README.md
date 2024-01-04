@@ -19,9 +19,9 @@ Features of application are
 - Easy to use interace
 - Modify color scheme to differenitae between completed and incomplete task
 
-When compiling or modifing the code keep in mind to
 
-Keep the files in folder named TodoList or if you want to place it custom named folder then update the package to the name of your folder.
+
+When compiling or modifing the code keep in mind to keep the files in folder named TodoList or if you want to place it custom named folder then update the package to the name of your folder.
 
 ## How to Use
 
